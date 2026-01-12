@@ -1,21 +1,66 @@
 # Welcome to My First Backend
-***
+
 
 ## Task
-The problem here is to build a backend webserver. The challenge lies in getting GET requests to move forward in the backend.
+
+The goal of this project was to build a simple backend web server that responds to HTTP GET requests. The focus was on understanding how routing works on the server side, how requests and responses are handled, and how basic authentication can be implemented in a backend environment.
+
+This project helped me practice core backend concepts such as request handling, routing, and authorization using Node.js and Express.
 
 ## Description
-I solved the problem by writing these backend scripts in express.js, a library of javascript. The real challenge was getting the admin and password authenticator passing in gandalf. On the backend it worked but it wouldn't pass in gandalf due to the nature of the tests.
+
+This backend server is built using Express.js, a lightweight JavaScript framework for creating web servers. The application exposes multiple GET endpoints that return information about Frank Sinatra, including a random song, personal details, and public vs. protected routes.
+
+## Challenge
+One of the more challenging parts of this project was implementing Basic Authentication for a protected route. The backend logic itself worked as expected, but I had to carefully match the authentication format required by automated tests (such as Gandalf). This pushed me to better understand HTTP headers, Base64 encoding, and how browsers and clients handle authentication.
+
+The project reinforced how small implementation details—like headers and response codes—matter a lot in backend development.
 
 ## Installation
-Well you need to npm install express and all of it's packages for it to work correctly.
 
-## Usage
-It works by running the server in node so by writing "node app.js" and a prompt will show up stating the the server is running. Then in a webpage using the localhost 8080 you can "/prompt_here" to get the GET request that you would want. however you can also do the same in the terminal.
+To run this project locally, make sure you have Node.js installed.
 
-### The Core Team
+Clone the repository
+
+Install dependencies by running:
+
+npm install express
 
 
+Ensure all required packages are installed before starting the server
+
+Usage
+
+Start the server by running:
+
+node app.js
+
+
+Once the server is running, you should see a message in the terminal confirming that it has started on port 8080.
+
+You can then access the following endpoints in your browser, Postman, or via the terminal using tools like curl:
+
+/ → Returns a random Frank Sinatra song
+
+/birth_date → Returns Frank Sinatra’s birth date
+
+/birth_city → Returns his birth city
+
+/wives → Returns a list of his wives
+
+/picture → Redirects to an image of Frank Sinatra
+
+/public → Public route accessible by anyone
+
+/protected → Requires Basic Authentication
+
+Username: admin
+
+Password: admin
+
+The /protected route demonstrates basic backend authentication using HTTP headers, while the /public route shows unrestricted access.
+
+## The Core Team
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
 <img src="https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png" alt="Qwasar SV Logo" height="20" style="vertical-align: middle;" /> Qwasar SV — Software Engineering School
 
