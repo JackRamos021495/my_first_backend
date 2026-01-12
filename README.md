@@ -24,8 +24,9 @@ Clone the repository
 
 Install dependencies by running:
 
+```
 npm install express
-
+```
 
 Ensure all required packages are installed before starting the server
 
@@ -33,8 +34,10 @@ Usage
 
 Start the server by running:
 
-node app.js
 
+```
+node app.js
+```
 
 Once the server is running, you should see a message in the terminal confirming that it has started on port 8080.
 
